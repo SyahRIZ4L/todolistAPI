@@ -1,6 +1,6 @@
-# ToDoList App
+# Todolist App API
 
-**Flutter ToDoList** adalah aplikasi manajemen tugas harian berbasis **Flutter** dan **Laravel 10**, yang dirancang dengan antarmuka modern, responsif, dan mudah digunakan. Cocok digunakan oleh pelajar, mahasiswa, developer, hingga pengguna umum yang ingin meningkatkan produktivitas dan keteraturan dalam menyelesaikan tugas sehari-hari.
+**Flutter Todolist** adalah aplikasi manajemen tugas harian berbasis **Flutter** dan **Laravel**, yang dirancang dengan antarmuka modern, responsif, dan mudah digunakan. Cocok digunakan oleh pelajar, mahasiswa, developer, hingga pengguna umum yang ingin meningkatkan produktivitas dan keteraturan dalam menyelesaikan tugas sehari-hari.
 
 ---
 
