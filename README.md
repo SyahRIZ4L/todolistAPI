@@ -1,92 +1,110 @@
-# ✅ Flutter_Todolist
+# ✅ Flutter ToDoList App
 
-Aplikasi **To-Do List** berbasis Flutter dan Laravel yang dirancang untuk membantu pengguna mengelola tugas harian dengan tampilan modern dan fitur lengkap. Cocok untuk pelajar, developer, maupun pengguna umum yang ingin lebih produktif.
-
----
-
-## 📱 Deskripsi Singkat
-
-Aplikasi ini menggunakan:
-- **Flutter** sebagai frontend
-- **Laravel 10** sebagai backend (REST API)
-- **MySQL** sebagai database
-
-### 🔧 Fitur Utama:
-- Tambah, edit, dan hapus tugas (CRUD)
-- Pilihan prioritas tugas (low, medium, high)
-- Deadline dengan penanggalan otomatis
-- Checklist untuk menandai tugas selesai
-- Tampilan modern menggunakan Flutter Card
-- `created_at` dan `updated_at` mengikuti waktu laptop pengguna
+**Flutter ToDoList** adalah aplikasi manajemen tugas harian berbasis **Flutter** dan **Laravel 10**, yang dirancang dengan antarmuka modern, responsif, dan mudah digunakan. Cocok digunakan oleh pelajar, mahasiswa, developer, hingga pengguna umum yang ingin meningkatkan produktivitas dan keteraturan dalam menyelesaikan tugas sehari-hari.
 
 ---
 
-## 🧩 Struktur Database
+## 📱 Tentang Aplikasi
 
-Tabel `tasks`:
+Aplikasi ini dibangun menggunakan:
+- **Flutter** (Frontend mobile)
+- **Laravel 10** (Backend RESTful API)
+- **MySQL** (Database)
 
-| Kolom         | Tipe Data | Keterangan                         |
-|---------------|-----------|------------------------------------|
-| id            | INT       | Primary Key                        |
-| title         | VARCHAR   | Judul tugas                        |
-| priority      | ENUM      | low / medium / high                |
-| due_date      | DATETIME  | Deadline tugas                     |
-| is_done       | BOOLEAN   | Status tugas (selesai/belum)       |
-| created_at    | TIMESTAMP | Otomatis saat input                |
-| updated_at    | TIMESTAMP | Otomatis saat edit                 |
+Aplikasi ini mengusung pendekatan client-server, memisahkan logika frontend dan backend, serta memanfaatkan API untuk menghubungkan keduanya.
 
 ---
 
-## 🔗 API Endpoint (Laravel)
+## ✨ Fitur Unggulan
 
-| Method | Endpoint             | Fungsi                |
-|--------|----------------------|------------------------|
-| GET    | `/api/tasks`         | Ambil semua tugas      |
-| POST   | `/api/tasks`         | Tambah tugas baru      |
-| PUT    | `/api/tasks/{id}`    | Edit tugas             |
-| DELETE | `/api/tasks/{id}`    | Hapus tugas            |
+- ✅ **CRUD Tugas**  
+  Tambah, edit, dan hapus tugas dengan mudah melalui antarmuka yang intuitif.
+
+- 🎯 **Penentuan Prioritas**  
+  Tandai tingkat urgensi tugas dengan pilihan: `Low`, `Medium`, atau `High`.
+
+- 📅 **Deadline Otomatis**  
+  Pilih tanggal jatuh tempo menggunakan date picker modern.
+
+- ☑️ **Checklist Selesai**  
+  Tandai tugas yang telah diselesaikan dengan satu sentuhan.
+
+- 📦 **Manajemen Waktu**  
+  Kolom `created_at` dan `updated_at` secara otomatis menyesuaikan waktu dari perangkat pengguna.
+
+- 🎨 **Desain Modern**  
+  Tampilan Flutter yang clean dan responsive, dengan komponen `Card` untuk menyusun daftar tugas dengan rapi.
 
 ---
 
-## 🧪 Tools & Teknologi
-- Flutter (versi terbaru)
-- Laravel 10
-- MySQL
-- Postman
-- VS Code
-- Laragon
+## 🗂️ Struktur Tabel Database
+
+Tabel: **`tasks`**
+
+| Kolom        | Tipe Data | Deskripsi                          |
+|--------------|-----------|-------------------------------------|
+| `id`         | INT       | Primary Key, auto increment         |
+| `title`      | VARCHAR   | Judul atau nama tugas               |
+| `priority`   | ENUM      | Nilai: low, medium, high            |
+| `due_date`   | DATETIME  | Tanggal batas akhir tugas           |
+| `is_done`    | BOOLEAN   | Status tugas: selesai atau belum    |
+| `created_at` | TIMESTAMP | Tercatat saat tugas dibuat          |
+| `updated_at` | TIMESTAMP | Diubah otomatis saat tugas diedit   |
 
 ---
 
-## 🚀 Cara Instalasi
+## 🔗 Endpoint API (Laravel Backend)
+
+| Method | Endpoint             | Fungsi                       |
+|--------|----------------------|------------------------------|
+| GET    | `/api/tasks`         | Menampilkan semua tugas      |
+| POST   | `/api/tasks`         | Menambahkan tugas baru       |
+| PUT    | `/api/tasks/{id}`    | Mengedit data tugas tertentu |
+| DELETE | `/api/tasks/{id}`    | Menghapus tugas berdasarkan ID |
+
+---
+
+## 🧰 Teknologi & Tools
+
+- 🔹 Flutter (SDK mobile UI modern)
+- 🔹 Laravel 10 (Framework backend PHP)
+- 🔹 MySQL (Relational database)
+- 🔹 Postman (Testing API)
+- 🔹 Visual Studio Code (Code Editor)
+- 🔹 Laragon (Local development environment)
+
+---
+
+## 🚀 Langkah Instalasi & Menjalankan Proyek
 
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/Thermaplates/Flutter_Todolist
-cd todolist
+cd Flutter_Todolist
 ```
 
-### 2. Setup Laravel (Backend)
+### 2. Konfigurasi Backend (Laravel)
 ```bash
 cd api
 composer install
 cp .env.example .env
 php artisan key:generate
 ```
-Edit file `.env`:
-```
+
+Edit `.env`:
+```env
 DB_DATABASE=todo_app
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Lalu jalankan migrasi database:
+Jalankan migrasi database:
 ```bash
 php artisan migrate
 php artisan serve
 ```
 
-### 3. Setup Flutter (Frontend)
+### 3. Jalankan Aplikasi Flutter
 ```bash
 cd flutter_app
 flutter pub get
@@ -95,35 +113,46 @@ flutter run
 
 ---
 
-## 🧪 Cara Menjalankan
-1. Jalankan API Laravel:
+## ▶️ Cara Menjalankan Aplikasi
+
+1. **Backend**:  
+   Pastikan Laravel API berjalan di terminal:  
    ```bash
    php artisan serve
    ```
-2. Jalankan Aplikasi Flutter:
+
+2. **Frontend**:  
+   Jalankan Flutter app di emulator atau perangkat fisik:  
    ```bash
    flutter run
    ```
 
 ---
 
-## 🎥 Demo Aplikasi
+## 🎬 Demo Aplikasi
 
 
 
-https://github.com/user-attachments/assets/76de91f5-9a9b-4c2d-8d12-b69e890992a2
+Uploading Recording 2025-06-14 203604.mp4…
 
 
 
 ---
 
-## 👤 Profil Pembuat
+## 👤 Profil Pengembang
 
-| Nama                        | ........................... |
-|-----------------------------|----------------------------|
-| Nomor Absen                | 20                         |
-| Kelas                      | XI RPL 1                   |
-| Sekolah                    | SMK Negeri 1 Bantul        |
-| Jurusan                    | Rekayasa Perangkat Lunak   |
+| Informasi         | Detail                        |
+|-------------------|-------------------------------|
+| **Nama**          | [Nama Kamu]                   |
+| **Nomor Absen**   | 20                            |
+| **Kelas**         | XI RPL 1                      |
+| **Sekolah**       | SMK Negeri 1 Bantul           |
+| **Jurusan**       | Rekayasa Perangkat Lunak (RPL)|
 
 ---
+
+## 📌 Catatan Tambahan
+
+- Backend Laravel bisa di-deploy ke hosting seperti Heroku atau Vercel (menggunakan API proxy).
+- Flutter frontend dapat di-build menjadi APK atau dijalankan di emulator Android/iOS.
+- Untuk pengembangan lebih lanjut, kamu bisa menambahkan fitur seperti login/register, reminder notifikasi, atau penyimpanan berbasis cloud.
