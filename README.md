@@ -1,79 +1,92 @@
-# Aplikasi To-Do List CRUD (Flutter + Laravel)
+# ✅ Flutter_Todolist
 
-## Deskripsi Aplikasi
-Aplikasi **To-Do List** ini adalah aplikasi CRUD (Create, Read, Update, Delete) berbasis **Flutter** sebagai frontend dan **Laravel** sebagai backend API. Aplikasi ini memungkinkan pengguna untuk:
-- Menambahkan tugas dengan title, prioritas, dan deadline
-- Mengatur tanggal dan jam `created_at` dan `updated_at` **sesuai tanggal dan waktu di laptop saat membuat dan mengedit tugas**
-- Mengedit tugas
-- Menghapus tugas 
-- Menampilkan semua tugas dengan tampilan modern menggunakan Flutter Card
-
-## Fitur Utama
-- **Halaman Utama**: Menampilkan daftar semua tugas
-- **Form Tambah/Edit**: Input title, prioritas, deadline, created_at, updated_at
-- **Checklist**: Menandai tugas selesai
-
-## Database
-Menggunakan database **MySQL** dengan tabel `tasks` dan field berikut:
-- `id`
-- `title`
-- `priority` (low, medium, high)
-- `due_date`
-- `is_done`
-- `created_at`
-- `updated_at`
-
-## API (Laravel)
-API berada di folder `/api/` dengan endpoint:
-- `GET /api/tasks` — Menampilkan semua tugas
-- `POST /api/tasks` — Menambah tugas baru
-- `PUT /api/tasks/{id}` — Mengupdate tugas
-- `DELETE /api/tasks/{id}` — Menghapus tugas
-
-## Software yang Digunakan
-- **Flutter** (versi terbaru)
-- **Laravel 10**
-- **MySQL**
-- **Postman** (untuk testing API)
-- **VS Code**
-- **Laragon**
+Aplikasi **To-Do List** berbasis Flutter dan Laravel yang dirancang untuk membantu pengguna mengelola tugas harian dengan tampilan modern dan fitur lengkap. Cocok untuk pelajar, developer, maupun pengguna umum yang ingin lebih produktif.
 
 ---
 
-## Cara Instalasi
+## 📱 Deskripsi Singkat
+
+Aplikasi ini menggunakan:
+- **Flutter** sebagai frontend
+- **Laravel 10** sebagai backend (REST API)
+- **MySQL** sebagai database
+
+### 🔧 Fitur Utama:
+- Tambah, edit, dan hapus tugas (CRUD)
+- Pilihan prioritas tugas (low, medium, high)
+- Deadline dengan penanggalan otomatis
+- Checklist untuk menandai tugas selesai
+- Tampilan modern menggunakan Flutter Card
+- `created_at` dan `updated_at` mengikuti waktu laptop pengguna
+
+---
+
+## 🧩 Struktur Database
+
+Tabel `tasks`:
+
+| Kolom         | Tipe Data | Keterangan                         |
+|---------------|-----------|------------------------------------|
+| id            | INT       | Primary Key                        |
+| title         | VARCHAR   | Judul tugas                        |
+| priority      | ENUM      | low / medium / high                |
+| due_date      | DATETIME  | Deadline tugas                     |
+| is_done       | BOOLEAN   | Status tugas (selesai/belum)       |
+| created_at    | TIMESTAMP | Otomatis saat input                |
+| updated_at    | TIMESTAMP | Otomatis saat edit                 |
+
+---
+
+## 🔗 API Endpoint (Laravel)
+
+| Method | Endpoint             | Fungsi                |
+|--------|----------------------|------------------------|
+| GET    | `/api/tasks`         | Ambil semua tugas      |
+| POST   | `/api/tasks`         | Tambah tugas baru      |
+| PUT    | `/api/tasks/{id}`    | Edit tugas             |
+| DELETE | `/api/tasks/{id}`    | Hapus tugas            |
+
+---
+
+## 🧪 Tools & Teknologi
+- Flutter (versi terbaru)
+- Laravel 10
+- MySQL
+- Postman
+- VS Code
+- Laragon
+
+---
+
+## 🚀 Cara Instalasi
 
 ### 1. Clone Repository
 ```bash
-git https://github.com/m-rafiff-edna/API-TODOLIST
+git clone https://github.com/Thermaplates/Flutter_Todolist
 cd todolist
 ```
 
-### 2. Backend (Laravel)
-Masuk ke folder `api/`:
-
+### 2. Setup Laravel (Backend)
 ```bash
 cd api
 composer install
 cp .env.example .env
 php artisan key:generate
 ```
-
-Edit file `.env` dan sesuaikan konfigurasi database:
+Edit file `.env`:
 ```
 DB_DATABASE=todo_app
 DB_USERNAME=root
-DB_PASSWORD=   # kosongkan jika tidak pakai password
+DB_PASSWORD=
 ```
 
-Jalankan migrasi database:
+Lalu jalankan migrasi database:
 ```bash
 php artisan migrate
 php artisan serve
 ```
 
-### 3. Frontend (Flutter)
-Masuk ke folder aplikasi Flutter (misal: `flutter_app/`):
-
+### 3. Setup Flutter (Frontend)
 ```bash
 cd flutter_app
 flutter pub get
@@ -82,29 +95,35 @@ flutter run
 
 ---
 
-## Cara Menjalankan
-
-1. Jalankan Laravel API:
+## 🧪 Cara Menjalankan
+1. Jalankan API Laravel:
    ```bash
    php artisan serve
    ```
-2. Jalankan Flutter:
+2. Jalankan Aplikasi Flutter:
    ```bash
    flutter run
    ```
 
 ---
 
-## Demo Aplikasi
+## 🎥 Demo Aplikasi
 
-https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84
+
+
+https://github.com/user-attachments/assets/76de91f5-9a9b-4c2d-8d12-b69e890992a2
+
+
 
 ---
 
-## Identitas Pembuat
+## 👤 Profil Pembuat
 
-- **Nama**: Muhammad Rafif Edna
-- **No**: 24
-- **Kelas**: XI RPL2
-- **Sekolah**: SMK Negeri 1 Bantul
-- **Jurusan**: Rekayasa Perangkat Lunak (RPL)
+| Nama                        | ........................... |
+|-----------------------------|----------------------------|
+| Nomor Absen                | 20                         |
+| Kelas                      | XI RPL 1                   |
+| Sekolah                    | SMK Negeri 1 Bantul        |
+| Jurusan                    | Rekayasa Perangkat Lunak   |
+
+---
