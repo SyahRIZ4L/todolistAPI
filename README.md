@@ -140,15 +140,13 @@ https://github.com/user-attachments/assets/80ef43e5-efd2-4071-9fa2-9c67029a8cb3
 
 ---
 
-## Profil Pengembang
+## Profil Pengembang :
 
-| Informasi         | Detail
-
-| **Nama**          | Zulfi Syahrizal Rustandie            
-| **Nomor Absen**   | 35                   
-| **Kelas**         | XI RPL 1                  
-| **Sekolah**       | SMK Negeri 1 Bantul        
-| **Jurusan**       | Rekayasa Perangkat Lunak (RPL)
+**Nama**          : Zulfi Syahrizal Rustandie            
+**Nomor Absen**   : 35                   
+**Kelas**         : XI RPL 1                  
+**Sekolah**       : SMK Negeri 1 Bantul        
+**Jurusan**       : Rekayasa Perangkat Lunak (RPL)
 
 ---
 
