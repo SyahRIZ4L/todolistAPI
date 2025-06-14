@@ -1,43 +1,41 @@
-# ✅ Flutter ToDoList App
+# ToDoList App
 
 **Flutter ToDoList** adalah aplikasi manajemen tugas harian berbasis **Flutter** dan **Laravel 10**, yang dirancang dengan antarmuka modern, responsif, dan mudah digunakan. Cocok digunakan oleh pelajar, mahasiswa, developer, hingga pengguna umum yang ingin meningkatkan produktivitas dan keteraturan dalam menyelesaikan tugas sehari-hari.
 
 ---
 
-## 📱 Tentang Aplikasi
+## Tentang Aplikasi
 
 Aplikasi ini dibangun menggunakan:
 - **Flutter** (Frontend mobile)
 - **Laravel 10** (Backend RESTful API)
 - **MySQL** (Database)
 
-Aplikasi ini mengusung pendekatan client-server, memisahkan logika frontend dan backend, serta memanfaatkan API untuk menghubungkan keduanya.
-
 ---
 
-## ✨ Fitur Unggulan
+## Fitur
 
-- ✅ **CRUD Tugas**  
+- **CRUD Tugas**  
   Tambah, edit, dan hapus tugas dengan mudah melalui antarmuka yang intuitif.
 
-- 🎯 **Penentuan Prioritas**  
+- **Penentuan Prioritas**  
   Tandai tingkat urgensi tugas dengan pilihan: `Low`, `Medium`, atau `High`.
 
-- 📅 **Deadline Otomatis**  
+- **Deadline Otomatis**  
   Pilih tanggal jatuh tempo menggunakan date picker modern.
 
-- ☑️ **Checklist Selesai**  
+- **Checklist Selesai**  
   Tandai tugas yang telah diselesaikan dengan satu sentuhan.
 
-- 📦 **Manajemen Waktu**  
+- **Manajemen Waktu**  
   Kolom `created_at` dan `updated_at` secara otomatis menyesuaikan waktu dari perangkat pengguna.
 
-- 🎨 **Desain Modern**  
+- **Desain Modern**  
   Tampilan Flutter yang clean dan responsive, dengan komponen `Card` untuk menyusun daftar tugas dengan rapi.
 
 ---
 
-## 🗂️ Struktur Tabel Database
+## Struktur Tabel Database
 
 Tabel: **`tasks`**
 
@@ -53,7 +51,7 @@ Tabel: **`tasks`**
 
 ---
 
-## 🔗 Endpoint API (Laravel Backend)
+## Endpoint API (Laravel Backend)
 
 | Method | Endpoint             | Fungsi                       |
 |--------|----------------------|------------------------------|
@@ -64,7 +62,7 @@ Tabel: **`tasks`**
 
 ---
 
-## 🧰 Teknologi & Tools
+## Teknologi & Tools
 
 - 🔹 Flutter (SDK mobile UI modern)
 - 🔹 Laravel 10 (Framework backend PHP)
@@ -75,7 +73,7 @@ Tabel: **`tasks`**
 
 ---
 
-## 🚀 Langkah Instalasi & Menjalankan Proyek
+## Langkah Instalasi & Menjalankan Proyek
 
 ### 1. Clone Repository
 ```bash
@@ -113,7 +111,7 @@ flutter run
 
 ---
 
-## ▶️ Cara Menjalankan Aplikasi
+## Cara Menjalankan Aplikasi
 
 1. **Backend**:  
    Pastikan Laravel API berjalan di terminal:  
@@ -129,7 +127,7 @@ flutter run
 
 ---
 
-## 🎬 Demo Aplikasi
+## Demo Aplikasi
 
 
 
@@ -142,15 +140,15 @@ https://github.com/user-attachments/assets/80ef43e5-efd2-4071-9fa2-9c67029a8cb3
 
 ---
 
-## 👤 Profil Pengembang
+## Profil Pengembang
 
-| Informasi         | Detail                        |
-|-------------------|-------------------------------|
-| **Nama**          | [Nama Kamu]                   |
-| **Nomor Absen**   | 20                            |
-| **Kelas**         | XI RPL 1                      |
-| **Sekolah**       | SMK Negeri 1 Bantul           |
-| **Jurusan**       | Rekayasa Perangkat Lunak (RPL)|
+| Informasi         | Detail
+
+| **Nama**          | Zulfi Syahrizal Rustandie            
+| **Nomor Absen**   | 35                   
+| **Kelas**         | XI RPL 1                  
+| **Sekolah**       | SMK Negeri 1 Bantul        
+| **Jurusan**       | Rekayasa Perangkat Lunak (RPL)
 
 ---
 
